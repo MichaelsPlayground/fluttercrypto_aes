@@ -115,14 +115,16 @@ class _MyFormPageState extends State<Aes256CbcPbkdf2EncryptionRoute> {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: <Widget>[
                     Expanded(
-                      child: ElevatedButton(
-                        style: ElevatedButton.styleFrom(
-                            primary: Colors.grey,
-                            textStyle: TextStyle(color: Colors.white)),
-                        onPressed: () {
-                          plaintextController.text = '';
-                        },
-                        child: Text('Feld löschen'),
+                      child: Expanded(
+                        child: ElevatedButton(
+                          style: ElevatedButton.styleFrom(
+                              primary: Colors.grey,
+                              textStyle: TextStyle(color: Colors.white)),
+                          onPressed: () {
+                            plaintextController.text = '';
+                          },
+                          child: Text('Feld löschen'),
+                        ),
                       ),
                     ),
                     SizedBox(width: 15),

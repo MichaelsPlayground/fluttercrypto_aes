@@ -74,26 +74,30 @@ class _MyFormPageState extends State<Aes256CbcPbkdf2DecryptionRoute> {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: <Widget>[
-                    ElevatedButton(
-                      style: ElevatedButton.styleFrom(
-                          primary: Colors.grey,
-                          textStyle: TextStyle(color: Colors.white)),
-                      onPressed: () {
-                        ciphertextController.text = '';
-                      },
-                      child: Text('Feld löschen'),
+                    Expanded(
+                      child: ElevatedButton(
+                        style: ElevatedButton.styleFrom(
+                            primary: Colors.grey,
+                            textStyle: TextStyle(color: Colors.white)),
+                        onPressed: () {
+                          ciphertextController.text = '';
+                        },
+                        child: Text('Feld löschen'),
+                      ),
                     ),
                     SizedBox(width: 15),
-                    ElevatedButton(
-                      style: ElevatedButton.styleFrom(
-                          primary: Colors.blue,
-                          textStyle: TextStyle(color: Colors.white)),
-                      onPressed: () async {
-                        final data =
-                            await Clipboard.getData(Clipboard.kTextPlain);
-                        ciphertextController.text = data!.text!;
-                      },
-                      child: Text('aus Zwischenablage einfügen'),
+                    Expanded(
+                      child: ElevatedButton(
+                        style: ElevatedButton.styleFrom(
+                            primary: Colors.blue,
+                            textStyle: TextStyle(color: Colors.white)),
+                        onPressed: () async {
+                          final data =
+                              await Clipboard.getData(Clipboard.kTextPlain);
+                          ciphertextController.text = data!.text!;
+                        },
+                        child: Text('aus Zwischenablage einfügen'),
+                      ),
                     ),
                   ],
                 ),
@@ -124,26 +128,30 @@ class _MyFormPageState extends State<Aes256CbcPbkdf2DecryptionRoute> {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: <Widget>[
-                    ElevatedButton(
-                      style: ElevatedButton.styleFrom(
-                          primary: Colors.grey,
-                          textStyle: TextStyle(color: Colors.white)),
-                      onPressed: () {
-                        passwordController.text = '';
-                      },
-                      child: Text('Feld löschen'),
+                    Expanded(
+                      child: ElevatedButton(
+                        style: ElevatedButton.styleFrom(
+                            primary: Colors.grey,
+                            textStyle: TextStyle(color: Colors.white)),
+                        onPressed: () {
+                          passwordController.text = '';
+                        },
+                        child: Text('Feld löschen'),
+                      ),
                     ),
                     SizedBox(width: 15),
-                    ElevatedButton(
-                      style: ElevatedButton.styleFrom(
-                          primary: Colors.blue,
-                          textStyle: TextStyle(color: Colors.white)),
-                      onPressed: () async {
-                        final data =
-                            await Clipboard.getData(Clipboard.kTextPlain);
-                        passwordController.text = data!.text!;
-                      },
-                      child: Text('aus Zwischenablage einfügen'),
+                    Expanded(
+                      child: ElevatedButton(
+                        style: ElevatedButton.styleFrom(
+                            primary: Colors.blue,
+                            textStyle: TextStyle(color: Colors.white)),
+                        onPressed: () async {
+                          final data =
+                              await Clipboard.getData(Clipboard.kTextPlain);
+                          passwordController.text = data!.text!;
+                        },
+                        child: Text('aus Zwischenablage einfügen'),
+                      ),
                     ),
                   ],
                 ),
@@ -152,14 +160,16 @@ class _MyFormPageState extends State<Aes256CbcPbkdf2DecryptionRoute> {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: <Widget>[
-                    ElevatedButton(
-                      style: ElevatedButton.styleFrom(
-                          primary: Colors.grey,
-                          textStyle: TextStyle(color: Colors.white)),
-                      onPressed: () {
-                        _formKey.currentState!.reset();
-                      },
-                      child: Text('Formulardaten löschen'),
+                    Expanded(
+                      child: ElevatedButton(
+                        style: ElevatedButton.styleFrom(
+                            primary: Colors.grey,
+                            textStyle: TextStyle(color: Colors.white)),
+                        onPressed: () {
+                          _formKey.currentState!.reset();
+                        },
+                        child: Text('Formulardaten löschen'),
+                      ),
                     ),
                     SizedBox(width: 25),
                     ElevatedButton(
@@ -233,31 +243,36 @@ class _MyFormPageState extends State<Aes256CbcPbkdf2DecryptionRoute> {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: <Widget>[
-                    ElevatedButton(
-                      style: ElevatedButton.styleFrom(
-                          primary: Colors.grey,
-                          textStyle: TextStyle(color: Colors.white)),
-                      onPressed: () {
-                        outputController.text = '';
-                      },
-                      child: Text('Feld löschen'),
+                    Expanded(
+                      child: ElevatedButton(
+                        style: ElevatedButton.styleFrom(
+                            primary: Colors.grey,
+                            textStyle: TextStyle(color: Colors.white)),
+                        onPressed: () {
+                          outputController.text = '';
+                        },
+                        child: Text('Feld löschen'),
+                      ),
                     ),
                     SizedBox(width: 15),
-                    ElevatedButton(
-                      style: ElevatedButton.styleFrom(
-                          primary: Colors.blue,
-                          textStyle: TextStyle(color: Colors.white)),
-                      onPressed: () async {
-                        final data = ClipboardData(text: outputController.text);
-                        await Clipboard.setData(data);
-                        ScaffoldMessenger.of(context).showSnackBar(
-                          SnackBar(
-                            content:
-                                const Text('in die Zwischenablage kopiert'),
-                          ),
-                        );
-                      },
-                      child: Text('in Zwischenablage kopieren'),
+                    Expanded(
+                      child: ElevatedButton(
+                        style: ElevatedButton.styleFrom(
+                            primary: Colors.blue,
+                            textStyle: TextStyle(color: Colors.white)),
+                        onPressed: () async {
+                          final data =
+                              ClipboardData(text: outputController.text);
+                          await Clipboard.setData(data);
+                          ScaffoldMessenger.of(context).showSnackBar(
+                            SnackBar(
+                              content:
+                                  const Text('in die Zwischenablage kopiert'),
+                            ),
+                          );
+                        },
+                        child: Text('in Zwischenablage kopieren'),
+                      ),
                     ),
                   ],
                 ),

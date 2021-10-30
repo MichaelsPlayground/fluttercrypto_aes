@@ -1,6 +1,6 @@
 # fluttercrypto_aes
 
-// todo in alle Formulare einfügen (ssonst klappt IOS 11 nicht):
+// erledigt: in alle Formulare einfügen (sonst klappt IOS 11 nicht):
 
 Expanded(
 child:
@@ -10,6 +10,9 @@ vor: ElevatedButton(
 und nach ), // Elevated Button noch
 ), einfügen
 
+nicht eintragen:
+overflow: TextOverflow.ellipsis,
+ergibt: aus ...
 
 uses pointycastle: ^3.3.4 for encryption
 
@@ -59,8 +62,6 @@ Mein wichtiges Geheimnis
 "ciphertext": "cmEVXh+b8ZrFqxGXxH6tcXEBcNocvLFS",
 "gcmTag": "U/euSItxBCUaECxQAzsfrw=="
 }
-
-
 
 
 A new Flutter project.

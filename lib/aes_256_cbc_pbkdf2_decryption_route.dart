@@ -271,7 +271,7 @@ class _MyFormPageState extends State<Aes256CbcPbkdf2DecryptionRoute> {
                             ),
                           );
                         },
-                        child: Text('in Zwischenablage kopieren s'),
+                        child: Text('in Zwischenablage kopieren'),
                       ),
                     ),
                   ],

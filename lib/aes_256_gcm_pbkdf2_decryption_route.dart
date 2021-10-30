@@ -295,7 +295,7 @@ class _MyFormPageState extends State<Aes256GcmPbkdf2DecryptionRoute> {
   }
 
   String aesGcmIterPbkdf2DecryptFromBase64(
-      String password, String iterations, String data) {
+      String password, String iterations, String data ) {
     try {
       var parts = data.split(':');
       var salt = base64Decoding(parts[0]);

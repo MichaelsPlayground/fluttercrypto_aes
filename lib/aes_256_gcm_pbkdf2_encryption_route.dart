@@ -305,7 +305,7 @@ class _MyFormPageState extends State<Aes256GcmPbkdf2EncryptionRoute> {
                           ScaffoldMessenger.of(context).showSnackBar(
                             SnackBar(
                               content: const Text(
-                                  'Daten in die Zwischenablage kopiert'),
+                                  'Daten in die Zwischenablage kopiert '),
                             ),
                           );
                         },
